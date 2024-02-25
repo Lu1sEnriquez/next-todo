@@ -4,15 +4,17 @@ export const revalidate = 0;  // `revalidate` is not a valid option for Next.js 
 
 import prisma from "@/lib/prisma";
 import { NewTodo, TodosGrid } from "@/todos/components";
-import { useEffect } from "react";
 
 export default  async function RestTodosPage() {
   console.log('construido');
-
+  
 const todos = await prisma.todo.findMany({orderBy:{description:"asc"}});
 
 
   return (
+    <>
+    <span className="text-5xl mb-10"> Server Actions</span>
+
     <div>
       <div className=" w-full px-3 mx-5 mb-5">
         <NewTodo></NewTodo>
@@ -20,5 +22,6 @@ const todos = await prisma.todo.findMany({orderBy:{description:"asc"}});
       {/* TODO: Formulario para agregar */}
      <TodosGrid todos={todos}></TodosGrid>
     </div>
+    </>
   );
 }

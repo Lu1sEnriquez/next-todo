@@ -19,7 +19,7 @@ export const items: Items[] = [
   },
   {
     title: "Server Actions",
-    path: "/",
+    path: "/dashboard/server-todos",
     icon: <IoListOutline size={30} />,
   },
   
