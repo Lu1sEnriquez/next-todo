@@ -1,4 +1,11 @@
-import { IoCalendarClearOutline, IoCheckboxOutline, IoListOutline } from "react-icons/io5";
+import {
+  IoBasketOutline,
+  IoCalendarClearOutline,
+  IoCheckboxOutline,
+  IoCodeWorkingOutline,
+  IoListOutline,
+  IoPersonOutline,
+} from "react-icons/io5";
 
 interface Items {
   path: string;
@@ -22,5 +29,19 @@ export const items: Items[] = [
     path: "/dashboard/server-todos",
     icon: <IoListOutline size={30} />,
   },
-  
+  {
+    title: "Cookies",
+    path: "/dashboard/cookies",
+    icon: <IoCodeWorkingOutline size={30} />,
+  },
+  {
+    title: "Products",
+    path: "/dashboard/products",
+    icon: <IoBasketOutline size={30} />,
+  },
+  {
+    title: "Profile",
+    path: "/dashboard/profile",
+    icon: <IoPersonOutline size={30} />,
+  },
 ];
